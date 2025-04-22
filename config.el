@@ -51,7 +51,7 @@
          (delete '("\\.pdf\\'" . default) org-file-apps)
          (add-to-list 'org-file-apps '("\\.pdf\\'" . "okular %s"))))
 
-(setq org-roam-node-display-template "${tags:10} ${title:100}")
+(setq org-roam-node-display-template "${tags:20} ${title:100}")
 (use-package org-roam
   :ensure t
   :init
@@ -64,7 +64,7 @@
       "%?"
       :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
       :unnarrowed t)
-     ("u" "uni notes" plain (file "~/notes/RoamNotes/Templates/UniNoteTemplate.org")
+     ("s" "uni standard notes" plain (file "~/notes/RoamNotes/Templates/UniNoteTemplate.org")
       :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
       :unnarrowed t)
      ("c" "course notes" plain (file "~/notes/RoamNotes/Templates/UniCourseNoteTemplate.org")
@@ -111,6 +111,8 @@
           org-roam-ui-update-on-save t
           org-roam-ui-open-on-start t))
 
+(after! evil-snipe
+  (evil-snipe-mode -1))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
