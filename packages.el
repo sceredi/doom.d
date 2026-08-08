@@ -52,6 +52,6 @@
 
 ;; NOTE: how to install packages
 ;; (package! tldr)
-(unpin! org-roam)
+; (unpin! org-roam)
 (package! org-roam-ui)
 (package! websocket)
