@@ -117,8 +117,8 @@
 (after! evil-snipe
   (evil-snipe-mode -1))
 
-(after! solaire-mode
-  (solaire-global-mode -1))
+;; (after! solaire-mode
+;;   (solaire-global-mode -1))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
