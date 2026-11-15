@@ -52,6 +52,13 @@
                                   ("~/probe/" . 2)
                                   "~/exercism/"))
 
+;; Automatically detect indentation
+(use-package! dtrt-indent
+  :hook (prog-mode . dtrt-indent-mode)
+  :config
+  (setq dtrt-indent-verbosity 0          ; no messages
+        dtrt-indent-max-lines 2000))
+
 ;; PDFs visited in Org-mode are opened in Okular (and not in the default choice) https://stackoverflow.com/a/8836108/789593
 (add-hook 'org-mode-hook
           '(lambda ()
