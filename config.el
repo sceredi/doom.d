@@ -45,6 +45,10 @@
 
 (setq org-agenda-files '("~/notes/"))
 
+(setq
+ default-directory "~"
+ projectile-project-search-path '("~/projects/" "~/probe/" "~/exercism/"))
+
 ;; PDFs visited in Org-mode are opened in Okular (and not in the default choice) https://stackoverflow.com/a/8836108/789593
 (add-hook 'org-mode-hook
       '(lambda ()
