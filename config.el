@@ -52,6 +52,11 @@
                                   ("~/probe/" . 2)
                                   "~/exercism/"))
 
+;; Fuzzy search
+(after! orderless
+  (setq orderless-matching-styles
+        '(orderless-literal orderless-regexp orderless-flex)))
+
 ;; Automatically detect indentation
 (use-package! dtrt-indent
   :hook (prog-mode . dtrt-indent-mode)
