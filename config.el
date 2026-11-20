@@ -52,6 +52,11 @@
                                   ("~/probe/" . 2)
                                   "~/exercism/"))
 
+;; Accept suggestion with ctrl+y
+(after! company
+  (map! :map company-active-map
+        "C-y" #'company-complete-selection))
+
 ;; Fuzzy search
 (after! orderless
   (setq orderless-matching-styles
